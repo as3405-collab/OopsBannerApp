@@ -2,32 +2,18 @@ public class OopsBannerApp {
 
     public static void main(String[] args) {
 
-        // Step 1: Create an empty String array to store 7 banner lines
-        String[] banner = new String[7];
+        // Declare and initialize array in a single statement using String.join()
+        String[] banner = {
+                String.join("", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*"),
+                String.join("", "*", " ", "W", "E", "L", "C", "O", "M", "E", " ", "*"),
+                String.join("", "*", " ", "T", "O", " ", "O", "O", "P", "S", " ", "*"),
+                String.join("", "*", " ", "B", "A", "N", "N", "E", "R", " ", "*"),
+                String.join("", "*", " ", "A", "P", "P", " ", "U", "C", "5", " ", "*"),
+                String.join("", "*", " ", "J", "A", "V", "A", " ", "D", "E", "M", "O"),
+                String.join("", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*")
+        };
 
-        // Step 2: Populate each line using String.join()
-        banner[0] = String.join(" ",
-                "  *****  ", "  *****  ", "*******  ", "  *****  ");
-
-        banner[1] = String.join(" ",
-                " *     * ", " *     * ", "*      * ", " *     * ");
-
-        banner[2] = String.join(" ",
-                "*       *", "*       *", "*      * ", " *       ");
-
-        banner[3] = String.join(" ",
-                "*       *", "*       *", "*******  ", "  *****  ");
-
-        banner[4] = String.join(" ",
-                "*       *", "*       *", "*        ", "       * ");
-
-        banner[5] = String.join(" ",
-                " *     * ", " *     * ", "*        ", " *     * ");
-
-        banner[6] = String.join(" ",
-                "  *****  ", "  *****  ", "*        ", "  *****  ");
-
-        // Step 3: Use enhanced for loop to print each line
+        // Enhanced for loop to print banner
         for (String line : banner) {
             System.out.println(line);
         }
